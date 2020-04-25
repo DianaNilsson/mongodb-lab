@@ -21,7 +21,7 @@ router.get('/:userName', async (req, res) => {
         const userposts = await Post.find({
             "poster": req.params.userName
         });
-        if (userposts.lenght > 0) {
+        if (userposts.length > 0) {
             res.status(200).json(userposts);
         } else {
             res.status(406).json({
